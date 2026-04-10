@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-GB"> <!-- 英式英语适配 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium UK Store | Secure Checkout & Fast Delivery</title>
+    <meta name="description" content="Premium products for UK customers with secure PayPal payment, free shipping and reliable after-sales service.">
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="United Kingdom">
+    <style>
+        /* 全局样式 - 英式简约商务风 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+        body {
+            line-height: 1.7;
+            color: #222;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        /* 头部样式 */
+        header {
+            background-color: #1a242f;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        /* 产品展示区 - PC左右/手机上下 */
+        .products-section {
+            padding: 4rem 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            color: #1a242f;
+            font-weight: 600;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* 图片自适应不变形 */
+        }
+        .product-info {
+            padding: 1.8rem;
+        }
+        .product-name {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #1a242f;
+            font-weight: 600;
+        }
+        .product-desc {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #d32f2f; /* 英式红色突出价格 */
+            margin-bottom: 1rem;
+        }
+        /* 订单表单区 */
+        .order-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+        .order-form {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #1a242f;
+            font-size: 1.05rem;
+        }
+        .form-group input, 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0d47a1;
+            box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+        }
+        /* 付款按钮 */
+        .pay-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background-color: #0d47a1;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .pay-btn:hover {
+            background-color: #0a377a;
+        }
+        /* 页脚 */
+        footer {
+            background-color: #1a242f;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        footer p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        /* 手机端强制1列排列 */
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .products-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .product-img {
+                height: 200px;
+            }
+            .order-form {
+                padding: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部（全英式英语） -->
+    <header>
+        <div class="container">
+            <h1>Premium UK Store</h1>
+            <p>Secure PayPal Payment • Free UK Shipping • 24/7 Customer Support</p>
+        </div>
+    </header>
+
+    <!-- 产品展示区（替换图片链接即可） -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Packages</h2>
+            <div class="products-grid">
+                <!-- 套餐1：99英镑/盒 -->
+                <div class="product-card">
+                    <img src="https://your-image-url-1.jpg" alt="Standard Package (1 Box)" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Standard Package (1 Box)</h3>
+                        <p class="product-desc">1 box of premium quality products with free shipping across the UK. All products are tested and certified to meet UK standards.</p>
+                        <div class="product-price">£99.00</div>
+                    </div>
+                </div>
+                <!-- 套餐2：199英镑/3盒 -->
+                <div class="product-card">
+                    <img src="https://your-image-url-2.jpg" alt="Value Package (3 Boxes)" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Value Package (3 Boxes)</h3>
+                        <p class="product-desc">3 boxes of premium quality products with free worldwide shipping. Best value for regular customers, saving up to £98 compared to single purchases.</p>
+                        <div class="product-price">£199.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订单表单区（已集成你的Google表单） -->
+    <section class="order-section">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <!-- 表单：同步到Google表格 + 跳PayPal付款 -->
+            <form id="orderForm" class="order-form" 
+                  action="https://docs.google.com/forms/d/e/1FAIpQLSd8Z8vZ8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z/formResponse" 
+                  method="POST" target="_blank">
+                
+                <!-- PayPal核心参数（隐藏） -->
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL"> <!-- 替换为你的PayPal邮箱 -->
+                <input type="hidden" name="currency_code" value="GBP">
+                <input type="hidden" id="paypalAmount" name="amount" value="99.00">
+                <input type="hidden" id="paypalItemName" name="item_name" value="Standard Package (1 Box) - £99.00">
+
+                <!-- Google表单字段（与你的表单自动匹配） -->
+                <div class="form-group">
+                    <label for="fullname">Full Name (Required)</label>
+                    <input type="text" id="fullname" name="entry.1000000" placeholder="e.g. John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address (Required)</label>
+                    <input type="email" id="email" name="entry.1000001" placeholder="e.g. john@example.co.uk" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Required)</label>
+                    <input type="tel" id="phone" name="entry.1000002" placeholder="e.g. +44 7911 123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address (Required)</label>
+                    <textarea id="address" name="entry.1000003" rows="3" placeholder="Full address including postcode (e.g. 123 High Street, London, SW1A 1AA, UK)" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="package">Select Package (Required)</label>
+                    <select id="package" name="entry.1000004" required onchange="updatePayPalParams()">
+                        <option value="Standard Package (1 Box) - £99.00" data-price="99.00">Standard Package (1 Box) - £99.00</option>
+                        <option value="Value Package (3 Boxes) - £199.00" data-price="199.00">Value Package (3 Boxes) - £199.00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Notes (Optional)</label>
+                    <textarea id="notes" name="entry.1000005" rows="2" placeholder="Any special requests or delivery instructions"></textarea>
+                </div>
+
+                <!-- 提交按钮：先存数据到Google表格，再跳PayPal -->
+                <button type="button" class="pay-btn" onclick="submitOrder()">Pay with PayPal & Complete Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚（英式风格） -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Premium UK Store. All Rights Reserved. Registered in England and Wales.</p>
+            <p style="margin-top: 0.8rem; opacity: 0.8;">Free shipping to all UK postcodes | 30-day money back guarantee | Customer support: support@premiumukstore.co.uk</p>
+        </div>
+    </footer>
+
+    <!-- 核心脚本：同步数据+付款 -->
+    <script>
+        // 解析你的Google表单链接，替换action为实际提交地址
+        document.getElementById('orderForm').action = 'https://docs.google.com/forms/d/e/1FAIpQLSdZmdje2jCUueRenNT8/formResponse';
+        
+        // 更新PayPal付款参数
+        function updatePayPalParams() {
+            const packageSelect = document.getElementById('package');
+            const selectedOption = packageSelect.options[packageSelect.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+            const itemName = selectedOption.value;
+            
+            document.getElementById('paypalAmount').value = price;
+            document.getElementById('paypalItemName').value = itemName;
+        }
+
+        // 提交订单：先存Google表格，再跳PayPal
+        function submitOrder() {
+            // 1. 提交到Google表格
+            const form = document.getElementById('orderForm');
+            form.submit();
+
+            // 2. 延迟1秒跳PayPal（确保数据存储完成）
+            setTimeout(() => {
+                const paypalForm = document.createElement('form');
+                paypalForm.method = 'POST';
+                paypalForm.action = 'https://www.paypal.com/cgi-bin/webscr';
+                paypalForm.target = '_top';
+
+                // 复制PayPal参数
+                const paypalParams = form.querySelectorAll('input[name="cmd"], input[name="business"], input[name="currency_code"], input[name="amount"], input[name="item_name"]');
+                paypalParams.forEach(param => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = param.name;
+                    input.value = param.value;
+                    paypalForm.appendChild(input);
+                });
+
+                document.body.appendChild(paypalForm);
+                paypalForm.submit();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
